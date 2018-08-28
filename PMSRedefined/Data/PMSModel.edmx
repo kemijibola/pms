@@ -1,0 +1,1029 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="PMSStoreModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="PMSStoreModelStoreContainer">
+          <EntitySet Name="tbl_Allocation" EntityType="PMSStoreModel.Store.tbl_Allocation" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbl_ConfigLockUser" EntityType="PMSStoreModel.Store.tbl_ConfigLockUser" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbl_ConfigUsage" EntityType="PMSStoreModel.Store.tbl_ConfigUsage" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbl_ConfigUserTopic" EntityType="PMSStoreModel.Store.tbl_ConfigUserTopic" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbl_CSLecturer" EntityType="PMSStoreModel.Store.tbl_CSLecturer" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbl_CSTopic" EntityType="PMSStoreModel.Store.tbl_CSTopic" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbl_PmsUser" EntityType="PMSStoreModel.Store.tbl_PmsUser" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbl_ProjectChapter" EntityType="PMSStoreModel.Store.tbl_ProjectChapter" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbl_RegisteredTopic" EntityType="PMSStoreModel.Store.tbl_RegisteredTopic" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbl_Role" EntityType="PMSStoreModel.Store.tbl_Role" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbl_RoleType" EntityType="PMSStoreModel.Store.tbl_RoleType" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbl_Session" EntityType="PMSStoreModel.Store.tbl_Session" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbl_Student" EntityType="PMSStoreModel.Store.tbl_Student" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tbl_StudentActivity" EntityType="PMSStoreModel.Store.tbl_StudentActivity" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_tbl_ConfigLockUser_tbl_Role" Association="PMSStoreModel.Store.FK_tbl_ConfigLockUser_tbl_Role">
+            <End Role="tbl_Role" EntitySet="tbl_Role" />
+            <End Role="tbl_ConfigLockUser" EntitySet="tbl_ConfigLockUser" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_ConfigUsage_tbl_Role" Association="PMSStoreModel.Store.FK_tbl_ConfigUsage_tbl_Role">
+            <End Role="tbl_Role" EntitySet="tbl_Role" />
+            <End Role="tbl_ConfigUsage" EntitySet="tbl_ConfigUsage" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_ConfigUsage_tbl_Session" Association="PMSStoreModel.Store.FK_tbl_ConfigUsage_tbl_Session">
+            <End Role="tbl_Session" EntitySet="tbl_Session" />
+            <End Role="tbl_ConfigUsage" EntitySet="tbl_ConfigUsage" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_ConfigUserTopic_tbl_Role" Association="PMSStoreModel.Store.FK_tbl_ConfigUserTopic_tbl_Role">
+            <End Role="tbl_Role" EntitySet="tbl_Role" />
+            <End Role="tbl_ConfigUserTopic" EntitySet="tbl_ConfigUserTopic" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_ConfigUserTopic_tbl_Session" Association="PMSStoreModel.Store.FK_tbl_ConfigUserTopic_tbl_Session">
+            <End Role="tbl_Session" EntitySet="tbl_Session" />
+            <End Role="tbl_ConfigUserTopic" EntitySet="tbl_ConfigUserTopic" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_CSLecturer_tbl_Session" Association="PMSStoreModel.Store.FK_tbl_CSLecturer_tbl_Session">
+            <End Role="tbl_Session" EntitySet="tbl_Session" />
+            <End Role="tbl_CSLecturer" EntitySet="tbl_CSLecturer" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_CSTopic_tbl_CSLecturer" Association="PMSStoreModel.Store.FK_tbl_CSTopic_tbl_CSLecturer">
+            <End Role="tbl_CSLecturer" EntitySet="tbl_CSLecturer" />
+            <End Role="tbl_CSTopic" EntitySet="tbl_CSTopic" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_CSTopic_tbl_Session" Association="PMSStoreModel.Store.FK_tbl_CSTopic_tbl_Session">
+            <End Role="tbl_Session" EntitySet="tbl_Session" />
+            <End Role="tbl_CSTopic" EntitySet="tbl_CSTopic" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_CSTopic_tbl_Student" Association="PMSStoreModel.Store.FK_tbl_CSTopic_tbl_Student">
+            <End Role="tbl_Student" EntitySet="tbl_Student" />
+            <End Role="tbl_CSTopic" EntitySet="tbl_CSTopic" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_PmsUser_tbl_RoleType" Association="PMSStoreModel.Store.FK_tbl_PmsUser_tbl_RoleType">
+            <End Role="tbl_RoleType" EntitySet="tbl_RoleType" />
+            <End Role="tbl_PmsUser" EntitySet="tbl_PmsUser" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_ProjectChapter_tbl_Session" Association="PMSStoreModel.Store.FK_tbl_ProjectChapter_tbl_Session">
+            <End Role="tbl_Session" EntitySet="tbl_Session" />
+            <End Role="tbl_ProjectChapter" EntitySet="tbl_ProjectChapter" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_RoleType_tbl_Role" Association="PMSStoreModel.Store.FK_tbl_RoleType_tbl_Role">
+            <End Role="tbl_Role" EntitySet="tbl_Role" />
+            <End Role="tbl_RoleType" EntitySet="tbl_RoleType" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_Student_tbl_Session" Association="PMSStoreModel.Store.FK_tbl_Student_tbl_Session">
+            <End Role="tbl_Session" EntitySet="tbl_Session" />
+            <End Role="tbl_Student" EntitySet="tbl_Student" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_StudentActivity_tbl_Session" Association="PMSStoreModel.Store.FK_tbl_StudentActivity_tbl_Session">
+            <End Role="tbl_Session" EntitySet="tbl_Session" />
+            <End Role="tbl_StudentActivity" EntitySet="tbl_StudentActivity" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_tbl_RegisteredTopic_tbl_Session" Association="PMSStoreModel.Store.FK_tbl_tbl_RegisteredTopic_tbl_Session">
+            <End Role="tbl_Session" EntitySet="tbl_Session" />
+            <End Role="tbl_RegisteredTopic" EntitySet="tbl_RegisteredTopic" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="tbl_Allocation">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="GUID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="StudentID" Type="int" Nullable="false" />
+          <Property Name="LecturerID" Type="int" Nullable="false" />
+          <Property Name="SessionID" Type="int" Nullable="false" />
+          <Property Name="DateAllocated" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_ConfigLockUser">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="GUID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="RoleID" Type="int" Nullable="false" />
+          <Property Name="LockRoleAfter" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_ConfigUsage">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="GUID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="RoleID" Type="int" Nullable="false" />
+          <Property Name="SessionID" Type="int" Nullable="false" />
+          <Property Name="Enabled" Type="bit" Nullable="false" />
+          <Property Name="Days" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="FromTime" Type="datetime" Nullable="false" />
+          <Property Name="ToTime" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_ConfigUserTopic">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="GUID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="RoleID" Type="int" Nullable="false" />
+          <Property Name="maxTopic" Type="int" Nullable="false" />
+          <Property Name="SessionID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_CSLecturer">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="GUID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="LecturerNo" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="Status" Type="bit" Nullable="false" />
+          <Property Name="SessionID" Type="int" Nullable="false" />
+          <Property Name="Description" Type="text" />
+        </EntityType>
+        <EntityType Name="tbl_CSTopic">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="GUID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="StudentID" Type="int" Nullable="false" />
+          <Property Name="LecturerID" Type="int" Nullable="false" />
+          <Property Name="SessionID" Type="int" Nullable="false" />
+          <Property Name="Topic" Type="text" Nullable="false" />
+          <Property Name="UploadDate" Type="datetime" Nullable="false" />
+          <Property Name="Status" Type="bit" Nullable="false" />
+          <Property Name="DateApproved" Type="datetime" Nullable="false" />
+          <Property Name="Comment" Type="text" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_PmsUser">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="GUID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Username" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Password" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="RoleTypeID" Type="int" Nullable="false" />
+          <Property Name="Status" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_ProjectChapter">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="GUID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="StudentID" Type="int" Nullable="false" />
+          <Property Name="Chapter" Type="varbinary(max)" Nullable="false" />
+          <Property Name="DateUploaded" Type="datetime" Nullable="false" />
+          <Property Name="SessionID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_RegisteredTopic">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="GUID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="StudentID" Type="int" Nullable="false" />
+          <Property Name="TopicID" Type="int" Nullable="false" />
+          <Property Name="LecturerID" Type="int" Nullable="false" />
+          <Property Name="Status" Type="bit" Nullable="false" />
+          <Property Name="Comment" Type="text" />
+          <Property Name="SessionID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbl_Role">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="GUID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="RoleName" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Description" Type="text" />
+        </EntityType>
+        <EntityType Name="tbl_RoleType">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="GUID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="RoleAssigned" Type="int" Nullable="false" />
+          <Property Name="Description" Type="text" />
+        </EntityType>
+        <EntityType Name="tbl_Session">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="GUID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SessionName" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="SessionCode" Type="varchar" Nullable="false" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="tbl_Student">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="GUID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MatricNo" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="SessionID" Type="int" Nullable="false" />
+          <Property Name="Status" Type="bit" Nullable="false" />
+          <Property Name="Description" Type="text" />
+        </EntityType>
+        <EntityType Name="tbl_StudentActivity">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="GUID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="LectureID" Type="int" Nullable="false" />
+          <Property Name="StudentID" Type="int" Nullable="false" />
+          <Property Name="Attendance" Type="bit" Nullable="false" />
+          <Property Name="Activity" Type="text" />
+          <Property Name="DateofVisit" Type="datetime" Nullable="false" />
+          <Property Name="SessionID" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_tbl_ConfigLockUser_tbl_Role">
+          <End Role="tbl_Role" Type="PMSStoreModel.Store.tbl_Role" Multiplicity="1" />
+          <End Role="tbl_ConfigLockUser" Type="PMSStoreModel.Store.tbl_ConfigLockUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_Role">
+              <PropertyRef Name="GUID" />
+            </Principal>
+            <Dependent Role="tbl_ConfigLockUser">
+              <PropertyRef Name="RoleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_ConfigUsage_tbl_Role">
+          <End Role="tbl_Role" Type="PMSStoreModel.Store.tbl_Role" Multiplicity="1" />
+          <End Role="tbl_ConfigUsage" Type="PMSStoreModel.Store.tbl_ConfigUsage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_Role">
+              <PropertyRef Name="GUID" />
+            </Principal>
+            <Dependent Role="tbl_ConfigUsage">
+              <PropertyRef Name="RoleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_ConfigUsage_tbl_Session">
+          <End Role="tbl_Session" Type="PMSStoreModel.Store.tbl_Session" Multiplicity="1" />
+          <End Role="tbl_ConfigUsage" Type="PMSStoreModel.Store.tbl_ConfigUsage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_Session">
+              <PropertyRef Name="GUID" />
+            </Principal>
+            <Dependent Role="tbl_ConfigUsage">
+              <PropertyRef Name="SessionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_ConfigUserTopic_tbl_Role">
+          <End Role="tbl_Role" Type="PMSStoreModel.Store.tbl_Role" Multiplicity="1" />
+          <End Role="tbl_ConfigUserTopic" Type="PMSStoreModel.Store.tbl_ConfigUserTopic" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_Role">
+              <PropertyRef Name="GUID" />
+            </Principal>
+            <Dependent Role="tbl_ConfigUserTopic">
+              <PropertyRef Name="RoleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_ConfigUserTopic_tbl_Session">
+          <End Role="tbl_Session" Type="PMSStoreModel.Store.tbl_Session" Multiplicity="1" />
+          <End Role="tbl_ConfigUserTopic" Type="PMSStoreModel.Store.tbl_ConfigUserTopic" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_Session">
+              <PropertyRef Name="GUID" />
+            </Principal>
+            <Dependent Role="tbl_ConfigUserTopic">
+              <PropertyRef Name="SessionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_CSLecturer_tbl_Session">
+          <End Role="tbl_Session" Type="PMSStoreModel.Store.tbl_Session" Multiplicity="1" />
+          <End Role="tbl_CSLecturer" Type="PMSStoreModel.Store.tbl_CSLecturer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_Session">
+              <PropertyRef Name="GUID" />
+            </Principal>
+            <Dependent Role="tbl_CSLecturer">
+              <PropertyRef Name="SessionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_CSTopic_tbl_CSLecturer">
+          <End Role="tbl_CSLecturer" Type="PMSStoreModel.Store.tbl_CSLecturer" Multiplicity="1" />
+          <End Role="tbl_CSTopic" Type="PMSStoreModel.Store.tbl_CSTopic" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_CSLecturer">
+              <PropertyRef Name="GUID" />
+            </Principal>
+            <Dependent Role="tbl_CSTopic">
+              <PropertyRef Name="LecturerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_CSTopic_tbl_Session">
+          <End Role="tbl_Session" Type="PMSStoreModel.Store.tbl_Session" Multiplicity="1" />
+          <End Role="tbl_CSTopic" Type="PMSStoreModel.Store.tbl_CSTopic" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_Session">
+              <PropertyRef Name="GUID" />
+            </Principal>
+            <Dependent Role="tbl_CSTopic">
+              <PropertyRef Name="SessionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_CSTopic_tbl_Student">
+          <End Role="tbl_Student" Type="PMSStoreModel.Store.tbl_Student" Multiplicity="1" />
+          <End Role="tbl_CSTopic" Type="PMSStoreModel.Store.tbl_CSTopic" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_Student">
+              <PropertyRef Name="GUID" />
+            </Principal>
+            <Dependent Role="tbl_CSTopic">
+              <PropertyRef Name="StudentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_PmsUser_tbl_RoleType">
+          <End Role="tbl_RoleType" Type="PMSStoreModel.Store.tbl_RoleType" Multiplicity="1" />
+          <End Role="tbl_PmsUser" Type="PMSStoreModel.Store.tbl_PmsUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_RoleType">
+              <PropertyRef Name="GUID" />
+            </Principal>
+            <Dependent Role="tbl_PmsUser">
+              <PropertyRef Name="RoleTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_ProjectChapter_tbl_Session">
+          <End Role="tbl_Session" Type="PMSStoreModel.Store.tbl_Session" Multiplicity="1" />
+          <End Role="tbl_ProjectChapter" Type="PMSStoreModel.Store.tbl_ProjectChapter" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_Session">
+              <PropertyRef Name="GUID" />
+            </Principal>
+            <Dependent Role="tbl_ProjectChapter">
+              <PropertyRef Name="SessionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_RoleType_tbl_Role">
+          <End Role="tbl_Role" Type="PMSStoreModel.Store.tbl_Role" Multiplicity="1" />
+          <End Role="tbl_RoleType" Type="PMSStoreModel.Store.tbl_RoleType" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_Role">
+              <PropertyRef Name="GUID" />
+            </Principal>
+            <Dependent Role="tbl_RoleType">
+              <PropertyRef Name="RoleAssigned" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_Student_tbl_Session">
+          <End Role="tbl_Session" Type="PMSStoreModel.Store.tbl_Session" Multiplicity="1" />
+          <End Role="tbl_Student" Type="PMSStoreModel.Store.tbl_Student" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_Session">
+              <PropertyRef Name="GUID" />
+            </Principal>
+            <Dependent Role="tbl_Student">
+              <PropertyRef Name="SessionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_StudentActivity_tbl_Session">
+          <End Role="tbl_Session" Type="PMSStoreModel.Store.tbl_Session" Multiplicity="1" />
+          <End Role="tbl_StudentActivity" Type="PMSStoreModel.Store.tbl_StudentActivity" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_Session">
+              <PropertyRef Name="GUID" />
+            </Principal>
+            <Dependent Role="tbl_StudentActivity">
+              <PropertyRef Name="SessionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_tbl_RegisteredTopic_tbl_Session">
+          <End Role="tbl_Session" Type="PMSStoreModel.Store.tbl_Session" Multiplicity="1" />
+          <End Role="tbl_RegisteredTopic" Type="PMSStoreModel.Store.tbl_RegisteredTopic" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_Session">
+              <PropertyRef Name="GUID" />
+            </Principal>
+            <Dependent Role="tbl_RegisteredTopic">
+              <PropertyRef Name="GUID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PMSStoreModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="pmsstoreEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="tbl_Allocation" EntityType="PMSStoreModel.tbl_Allocation" />
+          <EntitySet Name="tbl_ConfigLockUser" EntityType="PMSStoreModel.tbl_ConfigLockUser" />
+          <EntitySet Name="tbl_ConfigUsage" EntityType="PMSStoreModel.tbl_ConfigUsage" />
+          <EntitySet Name="tbl_ConfigUserTopic" EntityType="PMSStoreModel.tbl_ConfigUserTopic" />
+          <EntitySet Name="tbl_CSLecturer" EntityType="PMSStoreModel.tbl_CSLecturer" />
+          <EntitySet Name="tbl_CSTopic" EntityType="PMSStoreModel.tbl_CSTopic" />
+          <EntitySet Name="tbl_PmsUser" EntityType="PMSStoreModel.tbl_PmsUser" />
+          <EntitySet Name="tbl_ProjectChapter" EntityType="PMSStoreModel.tbl_ProjectChapter" />
+          <EntitySet Name="tbl_RegisteredTopic" EntityType="PMSStoreModel.tbl_RegisteredTopic" />
+          <EntitySet Name="tbl_Role" EntityType="PMSStoreModel.tbl_Role" />
+          <EntitySet Name="tbl_RoleType" EntityType="PMSStoreModel.tbl_RoleType" />
+          <EntitySet Name="tbl_Session" EntityType="PMSStoreModel.tbl_Session" />
+          <EntitySet Name="tbl_Student" EntityType="PMSStoreModel.tbl_Student" />
+          <EntitySet Name="tbl_StudentActivity" EntityType="PMSStoreModel.tbl_StudentActivity" />
+          <AssociationSet Name="FK_tbl_ConfigLockUser_tbl_Role" Association="PMSStoreModel.FK_tbl_ConfigLockUser_tbl_Role">
+            <End Role="tbl_Role" EntitySet="tbl_Role" />
+            <End Role="tbl_ConfigLockUser" EntitySet="tbl_ConfigLockUser" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_ConfigUsage_tbl_Role" Association="PMSStoreModel.FK_tbl_ConfigUsage_tbl_Role">
+            <End Role="tbl_Role" EntitySet="tbl_Role" />
+            <End Role="tbl_ConfigUsage" EntitySet="tbl_ConfigUsage" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_ConfigUsage_tbl_Session" Association="PMSStoreModel.FK_tbl_ConfigUsage_tbl_Session">
+            <End Role="tbl_Session" EntitySet="tbl_Session" />
+            <End Role="tbl_ConfigUsage" EntitySet="tbl_ConfigUsage" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_ConfigUserTopic_tbl_Role" Association="PMSStoreModel.FK_tbl_ConfigUserTopic_tbl_Role">
+            <End Role="tbl_Role" EntitySet="tbl_Role" />
+            <End Role="tbl_ConfigUserTopic" EntitySet="tbl_ConfigUserTopic" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_ConfigUserTopic_tbl_Session" Association="PMSStoreModel.FK_tbl_ConfigUserTopic_tbl_Session">
+            <End Role="tbl_Session" EntitySet="tbl_Session" />
+            <End Role="tbl_ConfigUserTopic" EntitySet="tbl_ConfigUserTopic" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_CSLecturer_tbl_Session" Association="PMSStoreModel.FK_tbl_CSLecturer_tbl_Session">
+            <End Role="tbl_Session" EntitySet="tbl_Session" />
+            <End Role="tbl_CSLecturer" EntitySet="tbl_CSLecturer" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_CSTopic_tbl_CSLecturer" Association="PMSStoreModel.FK_tbl_CSTopic_tbl_CSLecturer">
+            <End Role="tbl_CSLecturer" EntitySet="tbl_CSLecturer" />
+            <End Role="tbl_CSTopic" EntitySet="tbl_CSTopic" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_CSTopic_tbl_Session" Association="PMSStoreModel.FK_tbl_CSTopic_tbl_Session">
+            <End Role="tbl_Session" EntitySet="tbl_Session" />
+            <End Role="tbl_CSTopic" EntitySet="tbl_CSTopic" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_CSTopic_tbl_Student" Association="PMSStoreModel.FK_tbl_CSTopic_tbl_Student">
+            <End Role="tbl_Student" EntitySet="tbl_Student" />
+            <End Role="tbl_CSTopic" EntitySet="tbl_CSTopic" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_PmsUser_tbl_RoleType" Association="PMSStoreModel.FK_tbl_PmsUser_tbl_RoleType">
+            <End Role="tbl_RoleType" EntitySet="tbl_RoleType" />
+            <End Role="tbl_PmsUser" EntitySet="tbl_PmsUser" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_ProjectChapter_tbl_Session" Association="PMSStoreModel.FK_tbl_ProjectChapter_tbl_Session">
+            <End Role="tbl_Session" EntitySet="tbl_Session" />
+            <End Role="tbl_ProjectChapter" EntitySet="tbl_ProjectChapter" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_tbl_RegisteredTopic_tbl_Session" Association="PMSStoreModel.FK_tbl_tbl_RegisteredTopic_tbl_Session">
+            <End Role="tbl_Session" EntitySet="tbl_Session" />
+            <End Role="tbl_RegisteredTopic" EntitySet="tbl_RegisteredTopic" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_RoleType_tbl_Role" Association="PMSStoreModel.FK_tbl_RoleType_tbl_Role">
+            <End Role="tbl_Role" EntitySet="tbl_Role" />
+            <End Role="tbl_RoleType" EntitySet="tbl_RoleType" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_Student_tbl_Session" Association="PMSStoreModel.FK_tbl_Student_tbl_Session">
+            <End Role="tbl_Session" EntitySet="tbl_Session" />
+            <End Role="tbl_Student" EntitySet="tbl_Student" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tbl_StudentActivity_tbl_Session" Association="PMSStoreModel.FK_tbl_StudentActivity_tbl_Session">
+            <End Role="tbl_Session" EntitySet="tbl_Session" />
+            <End Role="tbl_StudentActivity" EntitySet="tbl_StudentActivity" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="tbl_Allocation">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="GUID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="StudentID" Type="Int32" Nullable="false" />
+          <Property Name="LecturerID" Type="Int32" Nullable="false" />
+          <Property Name="SessionID" Type="Int32" Nullable="false" />
+          <Property Name="DateAllocated" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="tbl_ConfigLockUser">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="GUID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="RoleID" Type="Int32" Nullable="false" />
+          <Property Name="LockRoleAfter" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="tbl_Role" Relationship="PMSStoreModel.FK_tbl_ConfigLockUser_tbl_Role" FromRole="tbl_ConfigLockUser" ToRole="tbl_Role" />
+        </EntityType>
+        <EntityType Name="tbl_ConfigUsage">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="GUID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="RoleID" Type="Int32" Nullable="false" />
+          <Property Name="SessionID" Type="Int32" Nullable="false" />
+          <Property Name="Enabled" Type="Boolean" Nullable="false" />
+          <Property Name="Days" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="FromTime" Type="DateTime" Nullable="true" Precision="3" />
+          <Property Name="ToTime" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="tbl_Role" Relationship="PMSStoreModel.FK_tbl_ConfigUsage_tbl_Role" FromRole="tbl_ConfigUsage" ToRole="tbl_Role" />
+          <NavigationProperty Name="tbl_Session" Relationship="PMSStoreModel.FK_tbl_ConfigUsage_tbl_Session" FromRole="tbl_ConfigUsage" ToRole="tbl_Session" />
+        </EntityType>
+        <EntityType Name="tbl_ConfigUserTopic">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="GUID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="RoleID" Type="Int32" Nullable="false" />
+          <Property Name="maxTopic" Type="Int32" Nullable="false" />
+          <Property Name="SessionID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="tbl_Role" Relationship="PMSStoreModel.FK_tbl_ConfigUserTopic_tbl_Role" FromRole="tbl_ConfigUserTopic" ToRole="tbl_Role" />
+          <NavigationProperty Name="tbl_Session" Relationship="PMSStoreModel.FK_tbl_ConfigUserTopic_tbl_Session" FromRole="tbl_ConfigUserTopic" ToRole="tbl_Session" />
+        </EntityType>
+        <EntityType Name="tbl_CSLecturer">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="GUID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="LecturerNo" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="Status" Type="Boolean" Nullable="false" />
+          <Property Name="SessionID" Type="Int32" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="tbl_Session" Relationship="PMSStoreModel.FK_tbl_CSLecturer_tbl_Session" FromRole="tbl_CSLecturer" ToRole="tbl_Session" />
+          <NavigationProperty Name="tbl_CSTopic" Relationship="PMSStoreModel.FK_tbl_CSTopic_tbl_CSLecturer" FromRole="tbl_CSLecturer" ToRole="tbl_CSTopic" />
+        </EntityType>
+        <EntityType Name="tbl_CSTopic">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="GUID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="StudentID" Type="Int32" Nullable="false" />
+          <Property Name="LecturerID" Type="Int32" Nullable="false" />
+          <Property Name="SessionID" Type="Int32" Nullable="false" />
+          <Property Name="Topic" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="UploadDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Status" Type="Boolean" Nullable="false" />
+          <Property Name="DateApproved" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Comment" Type="String" Nullable="false" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="tbl_CSLecturer" Relationship="PMSStoreModel.FK_tbl_CSTopic_tbl_CSLecturer" FromRole="tbl_CSTopic" ToRole="tbl_CSLecturer" />
+          <NavigationProperty Name="tbl_Session" Relationship="PMSStoreModel.FK_tbl_CSTopic_tbl_Session" FromRole="tbl_CSTopic" ToRole="tbl_Session" />
+          <NavigationProperty Name="tbl_Student" Relationship="PMSStoreModel.FK_tbl_CSTopic_tbl_Student" FromRole="tbl_CSTopic" ToRole="tbl_Student" />
+        </EntityType>
+        <EntityType Name="tbl_PmsUser">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="GUID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Username" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="RoleTypeID" Type="Int32" Nullable="false" />
+          <Property Name="Status" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="tbl_RoleType" Relationship="PMSStoreModel.FK_tbl_PmsUser_tbl_RoleType" FromRole="tbl_PmsUser" ToRole="tbl_RoleType" />
+        </EntityType>
+        <EntityType Name="tbl_ProjectChapter">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="GUID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="StudentID" Type="Int32" Nullable="false" />
+          <Property Name="Chapter" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+          <Property Name="DateUploaded" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="SessionID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="tbl_Session" Relationship="PMSStoreModel.FK_tbl_ProjectChapter_tbl_Session" FromRole="tbl_ProjectChapter" ToRole="tbl_Session" />
+        </EntityType>
+        <EntityType Name="tbl_RegisteredTopic">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="GUID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="StudentID" Type="Int32" Nullable="false" />
+          <Property Name="TopicID" Type="Int32" Nullable="false" />
+          <Property Name="LecturerID" Type="Int32" Nullable="false" />
+          <Property Name="Status" Type="Boolean" Nullable="false" />
+          <Property Name="Comment" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="SessionID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="tbl_Session" Relationship="PMSStoreModel.FK_tbl_tbl_RegisteredTopic_tbl_Session" FromRole="tbl_RegisteredTopic" ToRole="tbl_Session" />
+        </EntityType>
+        <EntityType Name="tbl_Role">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="GUID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="RoleName" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="tbl_ConfigLockUser" Relationship="PMSStoreModel.FK_tbl_ConfigLockUser_tbl_Role" FromRole="tbl_Role" ToRole="tbl_ConfigLockUser" />
+          <NavigationProperty Name="tbl_ConfigUsage" Relationship="PMSStoreModel.FK_tbl_ConfigUsage_tbl_Role" FromRole="tbl_Role" ToRole="tbl_ConfigUsage" />
+          <NavigationProperty Name="tbl_ConfigUserTopic" Relationship="PMSStoreModel.FK_tbl_ConfigUserTopic_tbl_Role" FromRole="tbl_Role" ToRole="tbl_ConfigUserTopic" />
+          <NavigationProperty Name="tbl_RoleType" Relationship="PMSStoreModel.FK_tbl_RoleType_tbl_Role" FromRole="tbl_Role" ToRole="tbl_RoleType" />
+        </EntityType>
+        <EntityType Name="tbl_RoleType">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="GUID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="RoleAssigned" Type="Int32" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="tbl_PmsUser" Relationship="PMSStoreModel.FK_tbl_PmsUser_tbl_RoleType" FromRole="tbl_RoleType" ToRole="tbl_PmsUser" />
+          <NavigationProperty Name="tbl_Role" Relationship="PMSStoreModel.FK_tbl_RoleType_tbl_Role" FromRole="tbl_RoleType" ToRole="tbl_Role" />
+        </EntityType>
+        <EntityType Name="tbl_Session">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="GUID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="SessionName" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="SessionCode" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="tbl_ConfigUsage" Relationship="PMSStoreModel.FK_tbl_ConfigUsage_tbl_Session" FromRole="tbl_Session" ToRole="tbl_ConfigUsage" />
+          <NavigationProperty Name="tbl_ConfigUserTopic" Relationship="PMSStoreModel.FK_tbl_ConfigUserTopic_tbl_Session" FromRole="tbl_Session" ToRole="tbl_ConfigUserTopic" />
+          <NavigationProperty Name="tbl_CSLecturer" Relationship="PMSStoreModel.FK_tbl_CSLecturer_tbl_Session" FromRole="tbl_Session" ToRole="tbl_CSLecturer" />
+          <NavigationProperty Name="tbl_CSTopic" Relationship="PMSStoreModel.FK_tbl_CSTopic_tbl_Session" FromRole="tbl_Session" ToRole="tbl_CSTopic" />
+          <NavigationProperty Name="tbl_ProjectChapter" Relationship="PMSStoreModel.FK_tbl_ProjectChapter_tbl_Session" FromRole="tbl_Session" ToRole="tbl_ProjectChapter" />
+          <NavigationProperty Name="tbl_RegisteredTopic" Relationship="PMSStoreModel.FK_tbl_tbl_RegisteredTopic_tbl_Session" FromRole="tbl_Session" ToRole="tbl_RegisteredTopic" />
+          <NavigationProperty Name="tbl_Student" Relationship="PMSStoreModel.FK_tbl_Student_tbl_Session" FromRole="tbl_Session" ToRole="tbl_Student" />
+          <NavigationProperty Name="tbl_StudentActivity" Relationship="PMSStoreModel.FK_tbl_StudentActivity_tbl_Session" FromRole="tbl_Session" ToRole="tbl_StudentActivity" />
+        </EntityType>
+        <EntityType Name="tbl_Student">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="GUID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="MatricNo" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="SessionID" Type="Int32" Nullable="false" />
+          <Property Name="Status" Type="Boolean" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="tbl_CSTopic" Relationship="PMSStoreModel.FK_tbl_CSTopic_tbl_Student" FromRole="tbl_Student" ToRole="tbl_CSTopic" />
+          <NavigationProperty Name="tbl_Session" Relationship="PMSStoreModel.FK_tbl_Student_tbl_Session" FromRole="tbl_Student" ToRole="tbl_Session" />
+        </EntityType>
+        <EntityType Name="tbl_StudentActivity">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="GUID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="LectureID" Type="Int32" Nullable="false" />
+          <Property Name="StudentID" Type="Int32" Nullable="false" />
+          <Property Name="Attendance" Type="Boolean" Nullable="false" />
+          <Property Name="Activity" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="DateofVisit" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="SessionID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="tbl_Session" Relationship="PMSStoreModel.FK_tbl_StudentActivity_tbl_Session" FromRole="tbl_StudentActivity" ToRole="tbl_Session" />
+        </EntityType>
+        <Association Name="FK_tbl_ConfigLockUser_tbl_Role">
+          <End Role="tbl_Role" Type="PMSStoreModel.tbl_Role" Multiplicity="1" />
+          <End Role="tbl_ConfigLockUser" Type="PMSStoreModel.tbl_ConfigLockUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_Role">
+              <PropertyRef Name="GUID" />
+            </Principal>
+            <Dependent Role="tbl_ConfigLockUser">
+              <PropertyRef Name="RoleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_ConfigUsage_tbl_Role">
+          <End Role="tbl_Role" Type="PMSStoreModel.tbl_Role" Multiplicity="1" />
+          <End Role="tbl_ConfigUsage" Type="PMSStoreModel.tbl_ConfigUsage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_Role">
+              <PropertyRef Name="GUID" />
+            </Principal>
+            <Dependent Role="tbl_ConfigUsage">
+              <PropertyRef Name="RoleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_ConfigUsage_tbl_Session">
+          <End Role="tbl_Session" Type="PMSStoreModel.tbl_Session" Multiplicity="1" />
+          <End Role="tbl_ConfigUsage" Type="PMSStoreModel.tbl_ConfigUsage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_Session">
+              <PropertyRef Name="GUID" />
+            </Principal>
+            <Dependent Role="tbl_ConfigUsage">
+              <PropertyRef Name="SessionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_ConfigUserTopic_tbl_Role">
+          <End Role="tbl_Role" Type="PMSStoreModel.tbl_Role" Multiplicity="1" />
+          <End Role="tbl_ConfigUserTopic" Type="PMSStoreModel.tbl_ConfigUserTopic" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_Role">
+              <PropertyRef Name="GUID" />
+            </Principal>
+            <Dependent Role="tbl_ConfigUserTopic">
+              <PropertyRef Name="RoleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_ConfigUserTopic_tbl_Session">
+          <End Role="tbl_Session" Type="PMSStoreModel.tbl_Session" Multiplicity="1" />
+          <End Role="tbl_ConfigUserTopic" Type="PMSStoreModel.tbl_ConfigUserTopic" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_Session">
+              <PropertyRef Name="GUID" />
+            </Principal>
+            <Dependent Role="tbl_ConfigUserTopic">
+              <PropertyRef Name="SessionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_CSLecturer_tbl_Session">
+          <End Role="tbl_Session" Type="PMSStoreModel.tbl_Session" Multiplicity="1" />
+          <End Role="tbl_CSLecturer" Type="PMSStoreModel.tbl_CSLecturer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_Session">
+              <PropertyRef Name="GUID" />
+            </Principal>
+            <Dependent Role="tbl_CSLecturer">
+              <PropertyRef Name="SessionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_CSTopic_tbl_CSLecturer">
+          <End Role="tbl_CSLecturer" Type="PMSStoreModel.tbl_CSLecturer" Multiplicity="1" />
+          <End Role="tbl_CSTopic" Type="PMSStoreModel.tbl_CSTopic" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_CSLecturer">
+              <PropertyRef Name="GUID" />
+            </Principal>
+            <Dependent Role="tbl_CSTopic">
+              <PropertyRef Name="LecturerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_CSTopic_tbl_Session">
+          <End Role="tbl_Session" Type="PMSStoreModel.tbl_Session" Multiplicity="1" />
+          <End Role="tbl_CSTopic" Type="PMSStoreModel.tbl_CSTopic" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_Session">
+              <PropertyRef Name="GUID" />
+            </Principal>
+            <Dependent Role="tbl_CSTopic">
+              <PropertyRef Name="SessionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_CSTopic_tbl_Student">
+          <End Role="tbl_Student" Type="PMSStoreModel.tbl_Student" Multiplicity="1" />
+          <End Role="tbl_CSTopic" Type="PMSStoreModel.tbl_CSTopic" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_Student">
+              <PropertyRef Name="GUID" />
+            </Principal>
+            <Dependent Role="tbl_CSTopic">
+              <PropertyRef Name="StudentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_PmsUser_tbl_RoleType">
+          <End Role="tbl_RoleType" Type="PMSStoreModel.tbl_RoleType" Multiplicity="1" />
+          <End Role="tbl_PmsUser" Type="PMSStoreModel.tbl_PmsUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_RoleType">
+              <PropertyRef Name="GUID" />
+            </Principal>
+            <Dependent Role="tbl_PmsUser">
+              <PropertyRef Name="RoleTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_ProjectChapter_tbl_Session">
+          <End Role="tbl_Session" Type="PMSStoreModel.tbl_Session" Multiplicity="1" />
+          <End Role="tbl_ProjectChapter" Type="PMSStoreModel.tbl_ProjectChapter" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_Session">
+              <PropertyRef Name="GUID" />
+            </Principal>
+            <Dependent Role="tbl_ProjectChapter">
+              <PropertyRef Name="SessionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_tbl_RegisteredTopic_tbl_Session">
+          <End Role="tbl_Session" Type="PMSStoreModel.tbl_Session" Multiplicity="1" />
+          <End Role="tbl_RegisteredTopic" Type="PMSStoreModel.tbl_RegisteredTopic" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_Session">
+              <PropertyRef Name="GUID" />
+            </Principal>
+            <Dependent Role="tbl_RegisteredTopic">
+              <PropertyRef Name="GUID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_RoleType_tbl_Role">
+          <End Role="tbl_Role" Type="PMSStoreModel.tbl_Role" Multiplicity="1" />
+          <End Role="tbl_RoleType" Type="PMSStoreModel.tbl_RoleType" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_Role">
+              <PropertyRef Name="GUID" />
+            </Principal>
+            <Dependent Role="tbl_RoleType">
+              <PropertyRef Name="RoleAssigned" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_Student_tbl_Session">
+          <End Role="tbl_Session" Type="PMSStoreModel.tbl_Session" Multiplicity="1" />
+          <End Role="tbl_Student" Type="PMSStoreModel.tbl_Student" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_Session">
+              <PropertyRef Name="GUID" />
+            </Principal>
+            <Dependent Role="tbl_Student">
+              <PropertyRef Name="SessionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tbl_StudentActivity_tbl_Session">
+          <End Role="tbl_Session" Type="PMSStoreModel.tbl_Session" Multiplicity="1" />
+          <End Role="tbl_StudentActivity" Type="PMSStoreModel.tbl_StudentActivity" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_Session">
+              <PropertyRef Name="GUID" />
+            </Principal>
+            <Dependent Role="tbl_StudentActivity">
+              <PropertyRef Name="SessionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="PMSStoreModelStoreContainer" CdmEntityContainer="pmsstoreEntities">
+          <EntitySetMapping Name="tbl_Allocation">
+            <EntityTypeMapping TypeName="PMSStoreModel.tbl_Allocation">
+              <MappingFragment StoreEntitySet="tbl_Allocation">
+                <ScalarProperty Name="GUID" ColumnName="GUID" />
+                <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+                <ScalarProperty Name="LecturerID" ColumnName="LecturerID" />
+                <ScalarProperty Name="SessionID" ColumnName="SessionID" />
+                <ScalarProperty Name="DateAllocated" ColumnName="DateAllocated" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_ConfigLockUser">
+            <EntityTypeMapping TypeName="PMSStoreModel.tbl_ConfigLockUser">
+              <MappingFragment StoreEntitySet="tbl_ConfigLockUser">
+                <ScalarProperty Name="GUID" ColumnName="GUID" />
+                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+                <ScalarProperty Name="LockRoleAfter" ColumnName="LockRoleAfter" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_ConfigUsage">
+            <EntityTypeMapping TypeName="PMSStoreModel.tbl_ConfigUsage">
+              <MappingFragment StoreEntitySet="tbl_ConfigUsage">
+                <ScalarProperty Name="GUID" ColumnName="GUID" />
+                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+                <ScalarProperty Name="SessionID" ColumnName="SessionID" />
+                <ScalarProperty Name="Enabled" ColumnName="Enabled" />
+                <ScalarProperty Name="Days" ColumnName="Days" />
+                <ScalarProperty Name="FromTime" ColumnName="FromTime" />
+                <ScalarProperty Name="ToTime" ColumnName="ToTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_ConfigUserTopic">
+            <EntityTypeMapping TypeName="PMSStoreModel.tbl_ConfigUserTopic">
+              <MappingFragment StoreEntitySet="tbl_ConfigUserTopic">
+                <ScalarProperty Name="GUID" ColumnName="GUID" />
+                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+                <ScalarProperty Name="maxTopic" ColumnName="maxTopic" />
+                <ScalarProperty Name="SessionID" ColumnName="SessionID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_CSLecturer">
+            <EntityTypeMapping TypeName="PMSStoreModel.tbl_CSLecturer">
+              <MappingFragment StoreEntitySet="tbl_CSLecturer">
+                <ScalarProperty Name="GUID" ColumnName="GUID" />
+                <ScalarProperty Name="LecturerNo" ColumnName="LecturerNo" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="SessionID" ColumnName="SessionID" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_CSTopic">
+            <EntityTypeMapping TypeName="PMSStoreModel.tbl_CSTopic">
+              <MappingFragment StoreEntitySet="tbl_CSTopic">
+                <ScalarProperty Name="GUID" ColumnName="GUID" />
+                <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+                <ScalarProperty Name="LecturerID" ColumnName="LecturerID" />
+                <ScalarProperty Name="SessionID" ColumnName="SessionID" />
+                <ScalarProperty Name="Topic" ColumnName="Topic" />
+                <ScalarProperty Name="UploadDate" ColumnName="UploadDate" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="DateApproved" ColumnName="DateApproved" />
+                <ScalarProperty Name="Comment" ColumnName="Comment" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_PmsUser">
+            <EntityTypeMapping TypeName="PMSStoreModel.tbl_PmsUser">
+              <MappingFragment StoreEntitySet="tbl_PmsUser">
+                <ScalarProperty Name="GUID" ColumnName="GUID" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="RoleTypeID" ColumnName="RoleTypeID" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_ProjectChapter">
+            <EntityTypeMapping TypeName="PMSStoreModel.tbl_ProjectChapter">
+              <MappingFragment StoreEntitySet="tbl_ProjectChapter">
+                <ScalarProperty Name="GUID" ColumnName="GUID" />
+                <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+                <ScalarProperty Name="Chapter" ColumnName="Chapter" />
+                <ScalarProperty Name="DateUploaded" ColumnName="DateUploaded" />
+                <ScalarProperty Name="SessionID" ColumnName="SessionID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_RegisteredTopic">
+            <EntityTypeMapping TypeName="PMSStoreModel.tbl_RegisteredTopic">
+              <MappingFragment StoreEntitySet="tbl_RegisteredTopic">
+                <ScalarProperty Name="GUID" ColumnName="GUID" />
+                <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+                <ScalarProperty Name="TopicID" ColumnName="TopicID" />
+                <ScalarProperty Name="LecturerID" ColumnName="LecturerID" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Comment" ColumnName="Comment" />
+                <ScalarProperty Name="SessionID" ColumnName="SessionID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Role">
+            <EntityTypeMapping TypeName="PMSStoreModel.tbl_Role">
+              <MappingFragment StoreEntitySet="tbl_Role">
+                <ScalarProperty Name="GUID" ColumnName="GUID" />
+                <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_RoleType">
+            <EntityTypeMapping TypeName="PMSStoreModel.tbl_RoleType">
+              <MappingFragment StoreEntitySet="tbl_RoleType">
+                <ScalarProperty Name="GUID" ColumnName="GUID" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="RoleAssigned" ColumnName="RoleAssigned" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Session">
+            <EntityTypeMapping TypeName="PMSStoreModel.tbl_Session">
+              <MappingFragment StoreEntitySet="tbl_Session">
+                <ScalarProperty Name="GUID" ColumnName="GUID" />
+                <ScalarProperty Name="SessionName" ColumnName="SessionName" />
+                <ScalarProperty Name="SessionCode" ColumnName="SessionCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Student">
+            <EntityTypeMapping TypeName="PMSStoreModel.tbl_Student">
+              <MappingFragment StoreEntitySet="tbl_Student">
+                <ScalarProperty Name="GUID" ColumnName="GUID" />
+                <ScalarProperty Name="MatricNo" ColumnName="MatricNo" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="SessionID" ColumnName="SessionID" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_StudentActivity">
+            <EntityTypeMapping TypeName="PMSStoreModel.tbl_StudentActivity">
+              <MappingFragment StoreEntitySet="tbl_StudentActivity">
+                <ScalarProperty Name="GUID" ColumnName="GUID" />
+                <ScalarProperty Name="LectureID" ColumnName="LectureID" />
+                <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+                <ScalarProperty Name="Attendance" ColumnName="Attendance" />
+                <ScalarProperty Name="Activity" ColumnName="Activity" />
+                <ScalarProperty Name="DateofVisit" ColumnName="DateofVisit" />
+                <ScalarProperty Name="SessionID" ColumnName="SessionID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

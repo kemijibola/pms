@@ -1,0 +1,22 @@
+c:\users\softwares\documents\visual studio 2012\Projects\PMSRedefined\PMSRedefined\bin\Debug\PMSRedefined.exe.config
+c:\users\softwares\documents\visual studio 2012\Projects\PMSRedefined\PMSRedefined\bin\Debug\PMSRedefined.exe
+c:\users\softwares\documents\visual studio 2012\Projects\PMSRedefined\PMSRedefined\bin\Debug\PMSRedefined.pdb
+c:\users\softwares\documents\visual studio 2012\Projects\PMSRedefined\PMSRedefined\bin\Debug\EntityFramework.dll
+c:\users\softwares\documents\visual studio 2012\Projects\PMSRedefined\PMSRedefined\bin\Debug\EntityFramework.xml
+c:\users\softwares\documents\visual studio 2012\Projects\PMSRedefined\PMSRedefined\obj\Debug\PMSRedefined.csprojResolveAssemblyReference.cache
+c:\users\softwares\documents\visual studio 2012\Projects\PMSRedefined\PMSRedefined\obj\Debug\PMSRedefined.Allocation.resources
+c:\users\softwares\documents\visual studio 2012\Projects\PMSRedefined\PMSRedefined\obj\Debug\PMSRedefined.Properties.Resources.resources
+c:\users\softwares\documents\visual studio 2012\Projects\PMSRedefined\PMSRedefined\obj\Debug\PMSRedefined.csproj.GenerateResource.Cache
+c:\users\softwares\documents\visual studio 2012\Projects\PMSRedefined\PMSRedefined\obj\Debug\PMSRedefined.exe
+c:\users\softwares\documents\visual studio 2012\Projects\PMSRedefined\PMSRedefined\obj\Debug\PMSRedefined.pdb
+C:\Users\Oluwakemi\Documents\Books\myProject\PMSRedefined\PMSRedefined\obj\Debug\PMSRedefined.pdb
+C:\Users\Oluwakemi\Documents\Books\myProject\PMSRedefined\PMSRedefined\bin\Debug\PMSRedefined.pdb
+C:\Users\Oluwakemi\Documents\Books\myProject\PMSRedefined\PMSRedefined\bin\Debug\EntityFramework.dll
+C:\Users\Oluwakemi\Documents\Books\myProject\PMSRedefined\PMSRedefined\bin\Debug\EntityFramework.xml
+C:\Users\Oluwakemi\Documents\Books\myProject\PMSRedefined\PMSRedefined\obj\Debug\PMSRedefined.csprojResolveAssemblyReference.cache
+C:\Users\Oluwakemi\Documents\Books\myProject\PMSRedefined\PMSRedefined\obj\Debug\PMSRedefined.Allocation.resources
+C:\Users\Oluwakemi\Documents\Books\myProject\PMSRedefined\PMSRedefined\obj\Debug\PMSRedefined.Properties.Resources.resources
+C:\Users\Oluwakemi\Documents\Books\myProject\PMSRedefined\PMSRedefined\obj\Debug\PMSRedefined.csproj.GenerateResource.Cache
+C:\Users\Oluwakemi\Documents\Books\myProject\PMSRedefined\PMSRedefined\bin\Debug\PMSRedefined.exe.config
+C:\Users\Oluwakemi\Documents\Books\myProject\PMSRedefined\PMSRedefined\bin\Debug\PMSRedefined.exe
+C:\Users\Oluwakemi\Documents\Books\myProject\PMSRedefined\PMSRedefined\obj\Debug\PMSRedefined.exe

@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PMSStoreModelStoreContainer" CdmEntityContainer="pmsstoreEntities">
+    <EntitySetMapping Name="tbl_Allocation">
+      <EntityTypeMapping TypeName="PMSStoreModel.tbl_Allocation">
+        <MappingFragment StoreEntitySet="tbl_Allocation">
+          <ScalarProperty Name="GUID" ColumnName="GUID" />
+          <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+          <ScalarProperty Name="LecturerID" ColumnName="LecturerID" />
+          <ScalarProperty Name="SessionID" ColumnName="SessionID" />
+          <ScalarProperty Name="DateAllocated" ColumnName="DateAllocated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_ConfigLockUser">
+      <EntityTypeMapping TypeName="PMSStoreModel.tbl_ConfigLockUser">
+        <MappingFragment StoreEntitySet="tbl_ConfigLockUser">
+          <ScalarProperty Name="GUID" ColumnName="GUID" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="LockRoleAfter" ColumnName="LockRoleAfter" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_ConfigUsage">
+      <EntityTypeMapping TypeName="PMSStoreModel.tbl_ConfigUsage">
+        <MappingFragment StoreEntitySet="tbl_ConfigUsage">
+          <ScalarProperty Name="GUID" ColumnName="GUID" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="SessionID" ColumnName="SessionID" />
+          <ScalarProperty Name="Enabled" ColumnName="Enabled" />
+          <ScalarProperty Name="Days" ColumnName="Days" />
+          <ScalarProperty Name="FromTime" ColumnName="FromTime" />
+          <ScalarProperty Name="ToTime" ColumnName="ToTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_ConfigUserTopic">
+      <EntityTypeMapping TypeName="PMSStoreModel.tbl_ConfigUserTopic">
+        <MappingFragment StoreEntitySet="tbl_ConfigUserTopic">
+          <ScalarProperty Name="GUID" ColumnName="GUID" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="maxTopic" ColumnName="maxTopic" />
+          <ScalarProperty Name="SessionID" ColumnName="SessionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_CSLecturer">
+      <EntityTypeMapping TypeName="PMSStoreModel.tbl_CSLecturer">
+        <MappingFragment StoreEntitySet="tbl_CSLecturer">
+          <ScalarProperty Name="GUID" ColumnName="GUID" />
+          <ScalarProperty Name="LecturerNo" ColumnName="LecturerNo" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="SessionID" ColumnName="SessionID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_CSTopic">
+      <EntityTypeMapping TypeName="PMSStoreModel.tbl_CSTopic">
+        <MappingFragment StoreEntitySet="tbl_CSTopic">
+          <ScalarProperty Name="GUID" ColumnName="GUID" />
+          <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+          <ScalarProperty Name="LecturerID" ColumnName="LecturerID" />
+          <ScalarProperty Name="SessionID" ColumnName="SessionID" />
+          <ScalarProperty Name="Topic" ColumnName="Topic" />
+          <ScalarProperty Name="UploadDate" ColumnName="UploadDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="DateApproved" ColumnName="DateApproved" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_PmsUser">
+      <EntityTypeMapping TypeName="PMSStoreModel.tbl_PmsUser">
+        <MappingFragment StoreEntitySet="tbl_PmsUser">
+          <ScalarProperty Name="GUID" ColumnName="GUID" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="RoleTypeID" ColumnName="RoleTypeID" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_ProjectChapter">
+      <EntityTypeMapping TypeName="PMSStoreModel.tbl_ProjectChapter">
+        <MappingFragment StoreEntitySet="tbl_ProjectChapter">
+          <ScalarProperty Name="GUID" ColumnName="GUID" />
+          <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+          <ScalarProperty Name="Chapter" ColumnName="Chapter" />
+          <ScalarProperty Name="DateUploaded" ColumnName="DateUploaded" />
+          <ScalarProperty Name="SessionID" ColumnName="SessionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_RegisteredTopic">
+      <EntityTypeMapping TypeName="PMSStoreModel.tbl_RegisteredTopic">
+        <MappingFragment StoreEntitySet="tbl_RegisteredTopic">
+          <ScalarProperty Name="GUID" ColumnName="GUID" />
+          <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+          <ScalarProperty Name="TopicID" ColumnName="TopicID" />
+          <ScalarProperty Name="LecturerID" ColumnName="LecturerID" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="SessionID" ColumnName="SessionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Role">
+      <EntityTypeMapping TypeName="PMSStoreModel.tbl_Role">
+        <MappingFragment StoreEntitySet="tbl_Role">
+          <ScalarProperty Name="GUID" ColumnName="GUID" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_RoleType">
+      <EntityTypeMapping TypeName="PMSStoreModel.tbl_RoleType">
+        <MappingFragment StoreEntitySet="tbl_RoleType">
+          <ScalarProperty Name="GUID" ColumnName="GUID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="RoleAssigned" ColumnName="RoleAssigned" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Session">
+      <EntityTypeMapping TypeName="PMSStoreModel.tbl_Session">
+        <MappingFragment StoreEntitySet="tbl_Session">
+          <ScalarProperty Name="GUID" ColumnName="GUID" />
+          <ScalarProperty Name="SessionName" ColumnName="SessionName" />
+          <ScalarProperty Name="SessionCode" ColumnName="SessionCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Student">
+      <EntityTypeMapping TypeName="PMSStoreModel.tbl_Student">
+        <MappingFragment StoreEntitySet="tbl_Student">
+          <ScalarProperty Name="GUID" ColumnName="GUID" />
+          <ScalarProperty Name="MatricNo" ColumnName="MatricNo" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="SessionID" ColumnName="SessionID" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_StudentActivity">
+      <EntityTypeMapping TypeName="PMSStoreModel.tbl_StudentActivity">
+        <MappingFragment StoreEntitySet="tbl_StudentActivity">
+          <ScalarProperty Name="GUID" ColumnName="GUID" />
+          <ScalarProperty Name="LectureID" ColumnName="LectureID" />
+          <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+          <ScalarProperty Name="Attendance" ColumnName="Attendance" />
+          <ScalarProperty Name="Activity" ColumnName="Activity" />
+          <ScalarProperty Name="DateofVisit" ColumnName="DateofVisit" />
+          <ScalarProperty Name="SessionID" ColumnName="SessionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
